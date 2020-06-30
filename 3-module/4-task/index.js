@@ -5,5 +5,10 @@
  * @returns {string}
  */
 function showSalary(users, age) {
-  // ваш код...
+    const newUsers = users.filter(function(user){
+      if (user.age <= age) {
+        return user}  
+      return false
+    })
+    return newUsers.map(item => (`${item.name}, ${item.balance}`)).join('\n')
 }
